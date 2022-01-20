@@ -5,7 +5,11 @@
       <map>
         <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/drawable-v24/ic_create_black_24dp.xml" value="0.17291666666666666" />
         <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/layout/activity_photo_detail.xml" value="0.1" />
         <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/layout/content_home.xml" value="0.1" />
+        <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/layout/content_photo_detail.xml" value="0.1" />
+        <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/layout/dialog_maps.xml" value="0.1" />
+        <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/layout/item_exif_data.xml" value="0.1" />
         <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/menu/menu_dialog_maps.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/menu/menu_main.xml" value="0.15677083333333333" />
         <entry key="..\:/Users/msre0001/AndroidStudioProjects/ImagePicker/app/src/main/res/menu/menu_photo_detail.xml" value="0.15677083333333333" />
