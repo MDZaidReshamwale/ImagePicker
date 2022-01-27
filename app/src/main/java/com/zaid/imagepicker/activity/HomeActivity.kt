@@ -57,14 +57,10 @@ class HomeActivity : AppCompatActivity(), HomeView {
                 override fun onPermissionRationaleShouldBeShown(permissions: MutableList<PermissionRequest>, token: PermissionToken) {
                     AlertDialog.Builder(this@HomeActivity).setTitle(R.string.app_name)
                         .setMessage(R.string.permission_rationale_message)
-                        .setNegativeButton(android.R.string.cancel, { dialog, _ ->
-                            dialog.dismiss()
-                            token.cancelPermissionRequest()
-                        })
-                        .setPositiveButton(android.R.string.ok, { dialog, _ ->
-                            dialog.dismiss()
-                            token.continuePermissionRequest()
-                        })
+                        .setNegativeButton(android.R.string.cancel, { dialog, _ -> dialog.dismiss()
+                            token.cancelPermissionRequest() })
+                        .setPositiveButton(android.R.string.ok, { dialog, _ -> dialog.dismiss()
+                            token.continuePermissionRequest() })
                         .setOnDismissListener({ token.cancelPermissionRequest() })
                         .show()
                 }
@@ -89,14 +85,16 @@ class HomeActivity : AppCompatActivity(), HomeView {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+//        Upcoming implementation
         R.id.action_about_developer -> {
             presenter.aboutDeveloper()
             true
         }
-        R.id.action_about_app -> {
-            presenter.aboutApp()
-            true
-        }
+//        Upcoming implementation
+//        R.id.action_about_app -> {
+//            presenter.aboutApp()
+//            true
+//        }
         else -> super.onOptionsItemSelected(item)
     }
 
@@ -112,7 +110,7 @@ class HomeActivity : AppCompatActivity(), HomeView {
     }
 
     override fun showAboutDeveloperDialog() {
-        coordinator_layout.showSnackbar(R.string.not_implemented_yet)
+        coordinator_layout.showSnackbar(R.string.Developer)
     }
 
     override fun showAboutAppDialog() {

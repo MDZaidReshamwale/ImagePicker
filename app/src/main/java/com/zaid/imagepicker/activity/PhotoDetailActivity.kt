@@ -46,9 +46,10 @@ class PhotoDetailActivity : AppCompatActivity(), PhotoDetailView, DatePickerDial
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_photo_detail)
-        setSupportActionBar(toolbar)
+//        Upcoming implementation
+//        setSupportActionBar(toolbar)
+//        toolbar_layout.setExpandedTitleColor(resources.getColor(android.R.color.transparent))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        toolbar_layout.setExpandedTitleColor(resources.getColor(android.R.color.transparent))
 
         presenter.initialize(intent)
     }
