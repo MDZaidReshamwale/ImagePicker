@@ -13,7 +13,5 @@ class HomePresenter(override val view: HomeView) : BasePresenter<BaseView> {
 
     fun aboutDeveloper() = view.showAboutDeveloperDialog()
 
-    fun aboutApp() = view.showAboutAppDialog()
-
     fun launchPhotoDetailActivity(pathFile: String?) = view.launchPhotoDetailActivity(pathFile)
 }

@@ -114,8 +114,9 @@ class HomeActivity : AppCompatActivity(), HomeView {
     }
 
     override fun showAboutAppDialog() {
-        coordinator_layout.showSnackbar(R.string.not_implemented_yet)
+        TODO("Not yet implemented")
     }
+
 
     override fun launchPhotoDetailActivity(pathFile: String?) {
         val intent = Intent(this, PhotoDetailActivity::class.java)

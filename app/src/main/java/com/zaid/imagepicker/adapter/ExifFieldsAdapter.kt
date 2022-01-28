@@ -68,6 +68,10 @@ class ExifFieldsAdapter(var exifList: List<ExifTagsContainer>, val presenter: Ph
                     image_type.setImageResource(R.drawable.ic_blur_on_black_24dp)
                     text_type.text = resources.getString(R.string.item_other)
                 }
+                Type.OTHER -> {
+                    image_type.setImageResource(R.drawable.ic_blur_on_black_24dp)
+                    text_type.text = resources.getString(R.string.item_other)
+                }
             }
         }
 

@@ -46,7 +46,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/photo_from_gallery"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:textSize="@dimen/text_title" />
 
                 <TextView
@@ -54,7 +55,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/photo_from_gallery_description"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    android:textStyle="italic"/>
             </LinearLayout>
 
 

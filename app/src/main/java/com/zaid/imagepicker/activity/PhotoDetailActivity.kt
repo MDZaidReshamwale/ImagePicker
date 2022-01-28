@@ -11,11 +11,13 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.Surface
 import android.widget.DatePicker
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.ImageHeaderParser.UNKNOWN_ORIENTATION
 import com.zaid.imagepicker.R
 import com.zaid.imagepicker.adapter.ExifFieldsAdapter
 import com.zaid.imagepicker.dailog.MapDialog
@@ -47,8 +49,8 @@ class PhotoDetailActivity : AppCompatActivity(), PhotoDetailView, DatePickerDial
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_photo_detail)
 //        Upcoming implementation
-//        setSupportActionBar(toolbar)
-//        toolbar_layout.setExpandedTitleColor(resources.getColor(android.R.color.transparent))
+        setSupportActionBar(toolbar)
+       toolbar_layout.setExpandedTitleColor(resources.getColor(android.R.color.transparent))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         presenter.initialize(intent)
@@ -203,6 +205,25 @@ class PhotoDetailActivity : AppCompatActivity(), PhotoDetailView, DatePickerDial
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         presenter.changeExifDate(year, month, dayOfMonth)
     }
+
+
+
+
+//    override fun onOrientationChanged(orientation: Int) {
+//        if (orientation == UNKNOWN_ORIENTATION) {
+//            return
+//        }
+//
+//        val rotation = when (orientation) {
+//            in 45 until 135 -> Surface.ROTATION_270
+//            in 135 until 225 -> Surface.ROTATION_180
+//            in 225 until 315 -> Surface.ROTATION_90
+//            else -> Surface.ROTATION_0
+//        }
+//
+//        imageAnalysis.targetRotation = rotation
+//        imageCapture.targetRotation = rotation
+//    }
 
     inline private fun showAlertDialog(@StringRes title: Int,
                                        @StringRes message: Int,

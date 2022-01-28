@@ -7,10 +7,7 @@ import android.util.Log
 import com.zaid.imagepicker.R
 import com.zaid.imagepicker.common.BasePresenter
 import com.zaid.imagepicker.common.BaseView
-import com.zaid.imagepicker.domain.ExifField
-import com.zaid.imagepicker.domain.ExifTagsContainer
-import com.zaid.imagepicker.domain.Location
-import com.zaid.imagepicker.domain.Type
+import com.zaid.imagepicker.domain.*
 import com.zaid.imagepicker.extension.*
 import com.zaid.imagepicker.interacter.PhotoDetailInteractor
 import com.zaid.imagepicker.util.Constants
@@ -97,11 +94,17 @@ class PhotoDetailPresenter(override val view: PhotoDetailView) : BasePresenter<B
                 ExifInterface.TAG_MAKE
                     , ExifInterface.TAG_MODEL ->
                     cameraPropertiesList.add(ExifField(it.key, it.value))
+                ExifInterface.TAG_ORIENTATION ,
                 ExifInterface.TAG_IMAGE_LENGTH
                     , ExifInterface.TAG_IMAGE_WIDTH ->
                     dimensionsList.add(ExifField(it.key, it.value))
+
                 else -> {
                     if (it.key.contains("GPS")) gpsList.add(ExifField(it.key, it.value))
+                    else if (it.key.contains("Orientation") && it.value.contains("1"))
+                    {
+                            it.value == "Potariat"
+                    }
                     else othersList.add(ExifField(it.key, it.value))
                 }
             }
